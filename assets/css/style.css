@@ -8,14 +8,24 @@ a {
     text-decoration: none;
 }
 
+form {
+    max-width: 60%;
+}
+
 body {
     background-color: var(--secondary-color);
 }
 
 footer {
-    font-size: small;
+    font-size: 0.7rem;
 }
 
 .main-color {
     background-color: var(--base-color);
+}
+
+@media screen and (min-width: 576) {
+    form {
+        max-width: fit-content;
+    }
 }

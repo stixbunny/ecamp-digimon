@@ -3,7 +3,7 @@ const digimonCard = document.getElementById("digimon-card");
 fillDigimonSelect();
 let errorModal = new bootstrap.Modal(document.getElementById('error-modal'));
 
-
+//Puebla la lista desplegable con los Digimon de la API
 function fillDigimonSelect() {
     fetch("https://digimon-api.vercel.app/api/digimon")
         .then(response => response.json())
@@ -17,6 +17,7 @@ function fillDigimonSelect() {
         })
 }
 
+//Genera la tarjeta con el digimon desde el select
 function getDigimon(select) {
     const digimonName = select.value;
     fetch(`https://digimon-api.vercel.app/api/digimon/name/${digimonName}`)
@@ -40,6 +41,7 @@ function getDigimon(select) {
     
 }
 
+//Genera la tarjeta con el digimon desde la busqueda
 function findDigimon(form) {
     const digimonName = form["digimon"].value;
     if(digimonName === "") {
